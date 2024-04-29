@@ -1,7 +1,6 @@
 import React from 'react'
 import HomeNav from '../components/HomeNav';
 const Home = () => {
-    const token = localStorage.getItem("token");
   return (
     <div>
         <div className='h-16'>

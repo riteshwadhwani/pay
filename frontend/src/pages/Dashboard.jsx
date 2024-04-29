@@ -12,11 +12,12 @@ export const Dashboard = () => {
                 Authorization : "Bearer " + localStorage.getItem("token"),
             }
         })
+        console.log("reponse",response);
         setBalance(response.data.balance);
     }
     useEffect( ()=>{
         checkBalance()
-    },[])
+    })
     return <div>
         <Appbar />
         <div className="m-8">
