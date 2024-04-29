@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const HomeNav = () => {
-    const [token,setToken] = useState(null);
-    useEffect(()=>{
-        setToken(localStorage.getItem("token"));
-    })
+    const token = localStorage.getItem("token");
     console.log("token",token);
     const navigate = useNavigate();
   return (
@@ -20,7 +17,7 @@ const HomeNav = () => {
                 </button>
             }
             {
-                token == null && 
+                token === null && token === "null" && 
                 <button className='p-3 rounded-full font-bold bg-blue-500 text-white' onClick={()=>{navigate("/signin")}}>
                     Sign In
                 </button>

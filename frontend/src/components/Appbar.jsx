@@ -5,7 +5,7 @@ export const Appbar = () => {
     const [modalData,setModalData] = useState(null);
     const navigate = useNavigate();
     const logout = () =>{
-        localStorage.setItem("token",null);
+        localStorage.removeItem("token");
         navigate('/signin')
     }
     return <div className="shadow h-14 flex justify-between w-screen">
